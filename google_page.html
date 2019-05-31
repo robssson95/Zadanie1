@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Google search</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/javascript"></script>
     <link rel="shortcut icon" type="image/png" href="google_favicon.png"/>
@@ -58,14 +59,14 @@
 
             <div class="flex-container" id="buttons">
                     <div>
-                        <button class="mdc-button" v-if="!inputContent">
-                            <span class="mdc-button" style="color: blue;">Szukaj w Google</span>
+                        <button class="btn btn-success" v-if="!inputContent">
+                            <span class="" style="color: white;">Szukaj w Google</span>
                         </button>
                     </div>
             
                     <div>
-                        <button class="mdc-button" v-if="!inputContent">
-                                <span class="mdc-button" style="color: blue;">Szczęśliwy traf</span>
+                        <button class="btn btn-success" v-if="!inputContent">
+                                <span class="" style="color: white;">Szczęśliwy traf</span>
                         </button>
             
                         </div>
