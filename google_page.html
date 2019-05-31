@@ -39,24 +39,41 @@
         <div>
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" />     
         </div>
+        <div>
+        <div class="main">
+            <div id="input_line">
+             <div id="input_box">
+                <div id="search">
+                    <img src="search.png">
+                    </div>
+
+                    <input id="text_input" v-model="inputContent" />
+                         <div id="microphone">
+                        <img src="keyboard.png">
+                        <img src="micro.png" style="padding-left:6px"></i>
+                
+                        </div>
+                    </div>
+                    <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+                
+                </div>       
+
+                <div class="flex-container" id="buttons">
+                        <div>
             
-        <div>
-            <input />
-        </div>
-    </div>
-
-    <div class="flex-container" id="buttons">
-        <div>
-            <input type="submit", value="Szukaj w Google">
-        </div>
-
-        <div>
-            <input type="submit" , value="Szczęśliwy traf">
-        </div>
-     </div>
-
- 
-
+                            <button class="mdc-button" v-if="!inputContent">
+                                <span class="mdc-button" style="color: blue;">Szukaj w Google</span>
+                            </button>
+                        </div>
+            
+                        <div>
+                            <button class="mdc-button" v-if="!inputContent">
+                                    <span class="mdc-button" style="color: blue;">Szczęśliwy traf</span>
+                            </button>
+            
+                        </div>
+                    </div>
+                </div>
         <div class="grid-container" id="footer">
 
             <div class="item1">
