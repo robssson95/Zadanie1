@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="animals.js" type="text/javascript"></script>
     <link rel="shortcut icon" type="image/png" href="google_favicon.png"/>
 </head>
 <body>
@@ -45,35 +43,34 @@
              <div id="input_box">
                 <div id="search">
                     <img src="search.png">
-                    </div>
-
-                    <input id="text_input" v-model="inputContent" />
-                         <div id="microphone">
-                        <img src="keyboard.png">
-                        <img src="micro.png" style="padding-left:6px"></i>
-                
-                        </div>
-                    </div>
-                    <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
-                
-                </div>       
-
-                <div class="flex-container" id="buttons">
-                        <div>
-            
-                            <button class="mdc-button" v-if="!inputContent">
-                                <span class="mdc-button" style="color: blue;">Szukaj w Google</span>
-                            </button>
-                        </div>
-            
-                        <div>
-                            <button class="mdc-button" v-if="!inputContent">
-                                    <span class="mdc-button" style="color: blue;">Szczęśliwy traf</span>
-                            </button>
-            
-                        </div>
-                    </div>
                 </div>
+
+                <input id="text_input" v-model="inputContent" />
+                <div id="microphone">
+                    <img src="keyboard.png">
+                    <img src="micro.png" style="padding-left:6px"></i>
+                
+                </div>
+            </div>
+                <v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+                
+            </div>       
+
+            <div class="flex-container" id="buttons">
+                    <div>
+                        <button class="mdc-button" v-if="!inputContent">
+                            <span class="mdc-button" style="color: blue;">Szukaj w Google</span>
+                        </button>
+                    </div>
+            
+                    <div>
+                        <button class="mdc-button" v-if="!inputContent">
+                                <span class="mdc-button" style="color: blue;">Szczęśliwy traf</span>
+                        </button>
+            
+                        </div>
+                    </div>
+            </div>
         <div class="grid-container" id="footer">
 
             <div class="item1">
@@ -92,6 +89,8 @@
             </div>
         </div>
 
-    
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="animals.js" type="text/javascript"></script>
+
 </body>
 </html>
